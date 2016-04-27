@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   tesseract.process(__dirname + req.body.image,function(err, text) {
     if(err) {
-      res.send(req.body);
+      res.send(req);
     } else {
-      res.send(req.body);
+      res.send(req);
     }
   });
 });
