@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   tesseract.process(__dirname + req.files,function(err, text) {
     if(err) {
-      console.log(req.files);
+      console.log(req);
       res.send(req.files);
     } else {
-      console.log(req.files);
+      console.log(req);
       res.send(req.files);
     }
   });
