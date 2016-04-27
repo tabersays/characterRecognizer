@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/', function(req, res) {
-  tesseract.process(__dirname + req.body.image,function(err, text) {
+  tesseract.process(__dirname + req.files,function(err, text) {
     if(err) {
       res.send(req.files);
     } else {
